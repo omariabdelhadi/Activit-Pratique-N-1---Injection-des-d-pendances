@@ -1,15 +1,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- Bean Dao -->
-    <bean id="dao" class="ma.ensa.di.dao.DaoImpl"/>
-
-    <!-- Bean Metier avec injection de Dao -->
-    <bean id="metier" class="ma.ensa.di.metier.MetierImpl">
-        <property name="dao" ref="dao"/>
-    </bean>
+    <!-- Dire à Spring de scanner les annotations -->
+    <context:component-scan base-package="ma.ensa.di"/>
 
 </beans>

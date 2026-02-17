@@ -2,12 +2,14 @@ package ma.ensa.di.metier;
 
 import ma.ensa.di.dao.IDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component  // Spring va créer un bean pour cette classe
+@Component
 public class MetierImpl implements IMetier {
 
-    @Autowired   // Spring injecte automatiquement un IDao
+    @Autowired
+    @Qualifier("daoImpl") // choisir DaoImpl, ou "daoImplV2" pour DaoImplV2
     private IDao dao;
 
     @Override
