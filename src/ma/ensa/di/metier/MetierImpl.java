@@ -1,13 +1,14 @@
 package ma.ensa.di.metier;
 
 import ma.ensa.di.dao.IDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component  // Spring va créer un bean pour cette classe
 public class MetierImpl implements IMetier {
-    private IDao dao;
 
-    public void setDao(IDao dao) {
-        this.dao = dao;
-    }
+    @Autowired   // Spring injecte automatiquement un IDao
+    private IDao dao;
 
     @Override
     public double calcul() {

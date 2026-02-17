@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean Dao -->
+    <bean id="dao" class="ma.ensa.di.dao.DaoImpl"/>
+
+    <!-- Bean Metier avec injection de Dao -->
+    <bean id="metier" class="ma.ensa.di.metier.MetierImpl">
+        <property name="dao" ref="dao"/>
+    </bean>
+
+</beans>
