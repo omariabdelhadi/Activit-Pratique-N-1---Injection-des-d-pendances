@@ -44,5 +44,3 @@ Le Framework permet l’injection des dépendances selon les mécanismes suivant
 - c) Injection par attribut (Field)
 
 ---
-
-## 📂 Architecture du projet

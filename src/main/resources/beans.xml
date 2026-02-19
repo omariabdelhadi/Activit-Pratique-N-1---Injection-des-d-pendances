@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <!-- Exemple 1: Bean avec injection par constructeur -->
+    <bean id="userRepository" class="com.example.repository.UserRepository">
+        <constructor>
+            <arg type="java.lang.String" value="jdbc:mysql://localhost:3306/mydb"/>
+            <arg type="java.lang.String" value="root"/>
+            <arg type="java.lang.String" value="password"/>
+        </constructor>
+    </bean>
+
+    <!-- Exemple 2: Bean avec injection par setter -->
+    <bean id="userService" class="com.example.service.UserService">
+        <property name="userRepository" ref="userRepository"/>
+        <property name="maxAttempts" value="3"/>
+        <property name="timeout" value="5000"/>
+    </bean>
+
+    <!-- Exemple 3: Bean avec injection par field -->
+    <bean id="userController" class="com.example.controller.UserController">
+        <property name="userService" ref="userService"/>
+        <property name="logLevel" value="INFO"/>
+    </bean>
+
+    <!-- Exemple 4: Bean simple sans dépendances -->
+    <bean id="config" class="com.example.config.AppConfig">
+        <property name="appName" value="MyApplication"/>
+        <property name="version" value="1.0.0"/>
+        <property name="debug" value="false"/>
+    </bean>
+</beans>

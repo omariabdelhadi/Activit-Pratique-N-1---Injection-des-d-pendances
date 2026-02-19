@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxb:bindings version="2.1" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.3.2 
+Voir <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
+Généré le : 2026.02.19 à 09:25:56 PM WET 
+
+  -->
+  <jaxb:bindings scd="x-schema::">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="com.framework.xml.beans"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="beans">
+      <jaxb:class ref="com.framework.xml.beans.Beans"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~Bean">
+      <jaxb:class ref="com.framework.xml.beans.Bean"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~Constructor">
+      <jaxb:class ref="com.framework.xml.beans.Constructor"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~ConstructorArg">
+      <jaxb:class ref="com.framework.xml.beans.ConstructorArg"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~Property">
+      <jaxb:class ref="com.framework.xml.beans.Property"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+</jaxb:bindings>
+
